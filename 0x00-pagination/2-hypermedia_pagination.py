@@ -39,10 +39,12 @@ class Server:
             return []  # Empty list if start_index is out of range
 
         return dataset[start_index:end_index]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
-        assert isinstance(page, int) and page > 0, "Page should be an integer greater than 0."
-        assert isinstance(page_size, int) and page_size > 0, "Page size should be an integer greater than 0."
+        assert isinstance(page, int) and page > 0, \
+            "Page should be an integer greater than 0."
+        assert isinstance(page_size, int) and page_size > 0, \
+            "Page size should be an integer greater than 0."
 
         dataset_page = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
