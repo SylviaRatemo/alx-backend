@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" LIFO
+""" LIFO Caching System Implementation
 """
 from base_caching import BaseCaching
 
