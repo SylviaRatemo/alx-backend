@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" FIFO
+""" FIFO caching system implementation
 """
 from base_caching import BaseCaching
 
