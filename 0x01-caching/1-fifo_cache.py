@@ -21,7 +21,7 @@ class FIFOCache(BaseCaching):
 
     def _push(self, key, item):
         """ FIFO algorithm, add element """
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS - 1:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             print("DISCARD: {}".format(self.data[self.next_out + 1]))
             self._pop()
         self.cache_data[key] = item
